@@ -1,80 +1,109 @@
 import java.util.Scanner;
 
-public class CurrencyConverter {
+public class currencyConverter {
 public static void main(String args[]) {
+    currencyConverting ();
+    rates ratesConversions = new rates();
+    ratesConversions.currencyRates();
+}
+
+public static void currencyConverting () {
 //declare variables
-double amount;
+int amount;
 String converter;
 Scanner kboard = new Scanner(System.in);
 
 System.out.println("Hello! I am a Currency Converter");
 System.out.println("Please choose one option from the list.");
-System.out.print("1.Dollar to Pound\n2.Dollar to Yen\n3.Dollar to Euro\n4.Dollar to Dinar\n5.Pound to Dollar\n6.Pound to Yen\n7.Pound to Euro\n8.Pound to Dinar\n9.Yen to Dollar\n10.Yen to Pound\n11.Yen to Euro\n12.Yen to Dinar\n13.Euro to Dollar\n14.Euro to Pound\n15.Euro to Yen\n16.Euro to Dinar\n17.Dinar to Dollar\n18.Dinar to Pound\n19.Dinar to Yen\n20.Dinar to Euro");
-//initialize variables
+System.out.print("1.Dollar to Pound\n2.Dollar to Yen\n3.Dollar to Euro\n4.Dollar to Dinar\n5.Pound to Dollar\n6.Pound to Yen\n7.Pound to Euro\n8.Pound to Dinar\n9.Yen to Dollar\n10.Yen to Pound\n11.Yen to Euro\n12.Yen to Dinar\n13.Euro to Dollar\n14.Euro to Pound\n15.Euro to Yen\n16.Euro to Dinar\n17.Dinar to Dollar\n18.Dinar to Pound\n19.Dinar to Yen\n20.Dinar to Euro\n");
 converter = kboard.nextLine();
 System.out.println("Please enter the amount");
 amount = kboard.nextInt();
 
-
 if (converter.equalsIgnoreCase("Dollar to Pound")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+dollarToPound);
 }
 else if (converter.equalsIgnoreCase("Dollar to Yen")) {
-System.out.println("Your amount is "+amount*104);
+System.out.println("Your amount is "+dollarToYen);
 }
 else if (converter.equalsIgnoreCase("Dollar to Euro")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+dollarToEuro);
 }
 else if (converter.equalsIgnoreCase("Dollar to Dinar")) {
-System.out.println("Your amount is "+amount*1190);
+System.out.println("Your amount is "+dollarToDinar);
 }
 else if (converter.equalsIgnoreCase("Pound to Dollar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+poundToDollar);
 }
 else if (converter.equalsIgnoreCase("Pound to Yen")) {
-System.out.println("Your amount is "+amount*139);
+System.out.println("Your amount is "+poundToYen);
 }
 else if (converter.equalsIgnoreCase("Pound to Euro")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+poundToEuro);
 }
 else if (converter.equalsIgnoreCase("Pound to Dinar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+poundToDinar);
 }
 else if (converter.equalsIgnoreCase("Yen to Dollar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+yenToDollar);
 }
 else if (converter.equalsIgnoreCase("Yen to Pound")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+yenToPound);
 }
 else if (converter.equalsIgnoreCase("Yen to Euro")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+yenToEuro);
 }
 else if (converter.equalsIgnoreCase("Yen to Dinar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+yenToDinar);
 }
 else if (converter.equalsIgnoreCase("Euro to Dollar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+euroToDollar);
 }
 else if (converter.equalsIgnoreCase("Euro to Pound")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+euroToPound);
 }
 else if (converter.equalsIgnoreCase("Euro to Yen")) {
-System.out.println("Your amount is "+amount*126);
+System.out.println("Your amount is "+euroToYen);
 }
 else if (converter.equalsIgnoreCase("Euro to Dinar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+euroToDinar);
 }
 else if (converter.equalsIgnoreCase("Dinar to Dollar")) {
-System.out.println("Your amount is "+amount*1);
+System.out.println("Your amount is "+dinarToDollar);
 }
 else if (converter.equalsIgnoreCase("Dinar to Pound")) {
-System.out.println("Your amount is "+amount*2);
+System.out.println("Your amount is "+dinarToPound);
 }
 else if (converter.equalsIgnoreCase("Dinar to Yen")) {
-System.out.println("Your amount is "+amount*340);
+System.out.println("Your amount is "+dinarToYen);
 }
 else if (converter.equalsIgnoreCase("Dinar to Euro")) {
-System.out.println("Your amount is "+amount*3);
+System.out.println("Your amount is "+dinarToEuro);
 }
 }
+}
+
+public class rates {
+    public void currencyRates() {
+        int dollarToPound = amount*1;
+        int dollarToYen = amount*104;
+        int dollarToEuro = amount*1;
+        int dollarToDinar = amount*1;
+        int poundToDollar = amount*1;
+        int poundToYen = amount*139;
+        int poundToEuro = amount*1; 
+        int poundToDinar = amount*1; 
+        int yenToDollar = amount*1; 
+        int yenToPound = amount*1; 
+        int yenToEuro = amount*1; 
+        int yenToDinar = amount*1; 
+        int euroToDollar = amount*1;
+        int euroToPound = amount*1; 
+        int euroToYen = amount*126; 
+        int euroToDinar = amount*1; 
+        int dinarToDollar = amount*3; 
+        int dinarToPound =amount*2; 
+        int dinarToYen = amount*340; 
+        int dinarToEuro = amount*3;
+    }
 }

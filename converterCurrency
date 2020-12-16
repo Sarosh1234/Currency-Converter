@@ -3,22 +3,48 @@ import java.util.Scanner;
 public class currencyConverter {
 public static void main(String args[]) {
     currencyConverting ();
-    rates ratesConversions = new rates();
-    ratesConversions.currencyRates();
+    
 }
 
 public static void currencyConverting () {
-//declare variables
-int amount;
-String converter;
+
+
 Scanner kboard = new Scanner(System.in);
 
 System.out.println("Hello! I am a Currency Converter");
 System.out.println("Please choose one option from the list.");
 System.out.print("1.Dollar to Pound\n2.Dollar to Yen\n3.Dollar to Euro\n4.Dollar to Dinar\n5.Pound to Dollar\n6.Pound to Yen\n7.Pound to Euro\n8.Pound to Dinar\n9.Yen to Dollar\n10.Yen to Pound\n11.Yen to Euro\n12.Yen to Dinar\n13.Euro to Dollar\n14.Euro to Pound\n15.Euro to Yen\n16.Euro to Dinar\n17.Dinar to Dollar\n18.Dinar to Pound\n19.Dinar to Yen\n20.Dinar to Euro\n");
-converter = kboard.nextLine();
+String converter = kboard.nextLine();
 System.out.println("Please enter the amount");
-amount = kboard.nextInt();
+int amount = kboard.nextInt();
+rates conversionRates = new rates();
+conversionRates.currencyRates(converter, amount);
+}
+}
+
+class rates {
+public void currencyRates(String converter, int amount) {
+    
+    int dollarToPound = amount*1;
+        int dollarToYen = amount*104;
+        int dollarToEuro = amount*1;
+        int dollarToDinar = amount*1;
+        int poundToDollar = amount*1;
+        int poundToYen = amount*139;
+        int poundToEuro = amount*1; 
+        int poundToDinar = amount*1; 
+        int yenToDollar = amount*1; 
+        int yenToPound = amount*1; 
+        int yenToEuro = amount*1; 
+        int yenToDinar = amount*1; 
+        int euroToDollar = amount*1;
+        int euroToPound = amount*1; 
+        int euroToYen = amount*126; 
+        int euroToDinar = amount*1; 
+        int dinarToDollar = amount*3; 
+        int dinarToPound =amount*2; 
+        int dinarToYen = amount*340; 
+        int dinarToEuro = amount*3;
 
 if (converter.equalsIgnoreCase("Dollar to Pound")) {
 System.out.println("Your amount is "+dollarToPound);
@@ -80,30 +106,6 @@ System.out.println("Your amount is "+dinarToYen);
 else if (converter.equalsIgnoreCase("Dinar to Euro")) {
 System.out.println("Your amount is "+dinarToEuro);
 }
-}
-}
-
-public class rates {
-    public void currencyRates() {
-        int dollarToPound = amount*1;
-        int dollarToYen = amount*104;
-        int dollarToEuro = amount*1;
-        int dollarToDinar = amount*1;
-        int poundToDollar = amount*1;
-        int poundToYen = amount*139;
-        int poundToEuro = amount*1; 
-        int poundToDinar = amount*1; 
-        int yenToDollar = amount*1; 
-        int yenToPound = amount*1; 
-        int yenToEuro = amount*1; 
-        int yenToDinar = amount*1; 
-        int euroToDollar = amount*1;
-        int euroToPound = amount*1; 
-        int euroToYen = amount*126; 
-        int euroToDinar = amount*1; 
-        int dinarToDollar = amount*3; 
-        int dinarToPound =amount*2; 
-        int dinarToYen = amount*340; 
-        int dinarToEuro = amount*3;
+        
     }
 }
